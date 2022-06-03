@@ -16,8 +16,8 @@ export default function App(props) {
     function getByChildren() {
       navigate("/getByChildren")
     }
-    function getByDriversLiscence() {
-      navigate("/getByDriversLiscence")
+    function getByDrivingLiscense() {
+      navigate("/getByDrivingLiscense")
     }
     function getAll() {
       navigate("/getAll")
@@ -53,7 +53,7 @@ export default function App(props) {
                               onClick={getByChildren}>Filter by children
                       </button>
                       <button className="btn btn-danger"
-                              onClick={getByDriversLiscence}>Filter by drivers liscence
+                              onClick={getByDrivingLiscense}>Filter by driving liscense
                       </button>
                       <button className="btn btn-warning"
                               onClick={getAll}>Retrieve All

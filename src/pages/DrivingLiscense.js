@@ -5,14 +5,14 @@ import React from 'react';
 import Input from "../bootstrap/Input";
 import CheckBox from "../bootstrap/CheckBox";
 
-const IsCitizen = () => {
+const DrivingLiscense = () => {
     const [checked, setChecked] = useState(false);
     const [citizens, setCitizens] = useState([]);
     const handleClick = () => setChecked(!checked)
     const [citizen, setCitizen] = useState(new Citizen());
 
     function getAllCitizen() {
-        fetch('http://localhost:8080/citizen/isCitizen', {
+        fetch('http://localhost:8080/citizen/hasDriversLiscense', {
             method: 'GET',
             headers: {
                 "Accept": "application/json"
@@ -35,7 +35,7 @@ const IsCitizen = () => {
                     <div className="card-body">
                         <CheckBox id="isCitizen"
                             handleChange={handleClick}
-                            label="Is Citizen"></CheckBox>
+                            label="Has Drivers Liscense"></CheckBox>
                             <button className="btn btn-primary " onClick={submit} >Submit</button>
                     </div>
                     <table className="table table-bordered table-hover table-striped table-responsive">
@@ -56,7 +56,7 @@ const IsCitizen = () => {
                                     <td>{ctz.id}</td>
                                     <td>{ctz.name}</td>
                                     <td>{ctz.isCitizen  ? 'YES' : 'NO'}</td>
-                                    <td>{ctz.hasDrivingLicense ? 'YES' : 'NO'}</td>
+                                    <td>{ctz.hasDrivingLiscense ? 'YES' : 'NO'}</td>
     
                                 </tr>
                             )
@@ -68,4 +68,4 @@ const IsCitizen = () => {
   );
 };
   
-export default IsCitizen;
+export default DrivingLiscense;

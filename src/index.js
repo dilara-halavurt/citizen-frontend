@@ -4,16 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CreateCitizen from './pages/CreateCitizen';
-import { BrowserRouter as Router, Routes, Route}
-    from 'react-router-dom';
+import DrivingLiscense from './pages/DrivingLiscense';
+import GetAll from './pages/GetAll';
+import GetById from './pages/GetById';
+import IsCitizen from './pages/IsCitizen';
+import NumberofChildren from './pages/NumberofChildren';
+import { BrowserRouter as Router, Routes, Route}from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.css";
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
     <App />
     <Routes>
         <Route path='/addCitizen' element={<CreateCitizen/>} />
-
+        <Route path='/getByDrivingLiscense' element={<DrivingLiscense/>} />
+        <Route path='/getAll' element={<GetAll/>} />
+        <Route path='/getById' element={<GetById/>} />
+        <Route path='/isCitizen' element={<IsCitizen/>} />
+        <Route path='/getByChildren' element={<NumberofChildren/>} />
     </Routes>
   </Router>
 );

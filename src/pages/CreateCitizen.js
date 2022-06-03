@@ -70,10 +70,10 @@ const CreateCitizen = () => {
                             handleChange={handleInputChange}
                             value={citizen.name}
                             label="FULL NAME"></Input>
-                        <CheckBox id="driversLiscence"
+                        <CheckBox id="drivingLiscense"
                             handleChange={handleInputChange}
                             value={citizen.hasDrivingLicense}
-                            label="Has Drivers Liscence"></CheckBox>
+                            label="Has Driving Liscense"></CheckBox>
                         <CheckBox id="isCitizen"
                             handleChange={handleInputChange}
                             value={citizen.isCitizen}
