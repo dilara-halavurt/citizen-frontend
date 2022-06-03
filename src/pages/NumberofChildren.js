@@ -10,7 +10,6 @@ const NumberOfChildren = () => {
     const [citizens, setCitizens] = useState([]);
     const [numberOfChildren, setNumberOfChildren] = useState(0);
     function getByNumberOfChildren() {
-        debugger;
         fetch(`http://localhost:8080/citizen/numberOfChildren/${numberOfChildren}`, {
             method: 'GET',
             headers: {

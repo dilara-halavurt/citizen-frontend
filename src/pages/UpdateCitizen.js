@@ -32,7 +32,7 @@ const CreateCitizen = () => {
         setChildrenFields([...childrenFields, newfield])
     }
     function createCitizen( ) {
-        debugger;
+         
         fetch('http://localhost:8080/updateCitizen', {
             method: 'PATCH',
             headers: {
@@ -45,13 +45,13 @@ const CreateCitizen = () => {
     }
     const submit = () => {
         let newCitizen = {...citizen};
-        debugger;
+         
         newCitizen['children'] = childrenFields;
         
         setCitizen(newCitizen);
         citizen['children']= childrenFields;
         console.log(JSON.stringify(citizen))
-        debugger;
+         
         createCitizen();
 
     }

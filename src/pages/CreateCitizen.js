@@ -13,8 +13,14 @@ const CreateCitizen = () => {
     function handleInputChange(event) {
         const {name, value} = event.target;
         let newCitizen = {...citizen};
-        newCitizen[name] = value;
-
+        if (name === 'isCitizen') {
+            newCitizen[name] = !newCitizen[name];
+        } else if(name === 'hasDrivingLicense') {
+            newCitizen[name] = !newCitizen[name];
+        } else
+        {
+            newCitizen[name] = value;
+        }
         setCitizen(newCitizen);
     }
     const handleChildrenChange = (index, event) => {
@@ -32,7 +38,7 @@ const CreateCitizen = () => {
         setChildrenFields([...childrenFields, newfield])
     }
     function createCitizen( ) {
-        debugger;
+         
         fetch('http://localhost:8080/citizen', {
             method: 'POST',
             headers: {
@@ -45,13 +51,13 @@ const CreateCitizen = () => {
     }
     const submit = () => {
         let newCitizen = {...citizen};
-        debugger;
+         
         newCitizen['children'] = childrenFields;
         
         setCitizen(newCitizen);
         citizen['children']= childrenFields;
         console.log(JSON.stringify(citizen))
-        debugger;
+         
         createCitizen();
 
     }
@@ -62,15 +68,11 @@ const CreateCitizen = () => {
                         <h4 className="card-title">Citizen</h4>
                     </div>
                     <div className="card-body">
-                        <Input id="id"
-                            handleChange={handleInputChange}
-                            value={citizen.id}
-                            label="ID"></Input>
                         <Input id="name"
                             handleChange={handleInputChange}
                             value={citizen.name}
                             label="FULL NAME"></Input>
-                        <CheckBox id="drivingLiscense"
+                        <CheckBox id="hasDrivingLicense"
                             handleChange={handleInputChange}
                             value={citizen.hasDrivingLicense}
                             label="Has Driving Liscense"></CheckBox>

@@ -9,7 +9,7 @@ const GetById = () => {
     const [citizen, setCitizen] = useState(new Citizen());
     
     function getCitizensById() {
-        debugger;
+         
         fetch(`http://localhost:8080/citizen/byId/${citizen.id}`, {
             method: 'GET',
             headers: {
@@ -19,7 +19,7 @@ const GetById = () => {
             .then(ctzs => setCitizen(ctzs));
     }
     function submit() {
-        debugger;
+         
         getCitizensById(citizen.id)
     }
     function handleInputChange(event) {
@@ -27,7 +27,7 @@ const GetById = () => {
         let newCitizen = {...citizen};
         newCitizen[name] = value;
         setCitizen(newCitizen);
-        debugger;
+         
     }
   return (
             <div className="card">
