@@ -19,7 +19,7 @@ const NumberOfChildren = () => {
             .then(ctzs => setCitizens(ctzs));
     }
     function submit() {
-        getByNumberOfChildren(numberOfChildren)
+        getByNumberOfChildren()
     }
     function handleInputChange(event) {
         const {name, value} = event.target;

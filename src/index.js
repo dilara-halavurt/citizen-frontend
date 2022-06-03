@@ -7,6 +7,7 @@ import CreateCitizen from './pages/CreateCitizen';
 import UpdateCitizen from './pages/UpdateCitizen';
 import DrivingLiscense from './pages/DrivingLiscense';
 import GetAll from './pages/GetAll';
+import GetByName from './pages/GetbyName';
 import GetById from './pages/GetById';
 import IsCitizen from './pages/IsCitizen';
 import NumberofChildren from './pages/NumberofChildren';
@@ -26,6 +27,7 @@ root.render(
         <Route path='/isCitizen' element={<IsCitizen/>} />
         <Route path='/getByChildren' element={<NumberofChildren/>} />
         <Route path='/updateCitizen' element={<UpdateCitizen/>} />
+        <Route path='/getByName' element={<GetByName/>} />
     </Routes>
   </Router>
 );
