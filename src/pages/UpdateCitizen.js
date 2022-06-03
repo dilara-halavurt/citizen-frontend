@@ -5,7 +5,7 @@ import React from 'react';
 import Input from "../bootstrap/Input";
 import CheckBox from "../bootstrap/CheckBox";
 
-const CreateCitizen = () => {
+const UpdateCitizen = () => {
     const [childrenFields, setChildrenFields] = useState([
         { childName: '', childId: '' }
       ])
@@ -13,8 +13,14 @@ const CreateCitizen = () => {
     function handleInputChange(event) {
         const {name, value} = event.target;
         let newCitizen = {...citizen};
-        newCitizen[name] = value;
-
+        if (name === 'isCitizen') {
+            newCitizen[name] = !newCitizen[name];
+        } else if(name === 'hasDrivingLicense') {
+            newCitizen[name] = !newCitizen[name];
+        } else
+        {
+            newCitizen[name] = value;
+        }
         setCitizen(newCitizen);
     }
     const handleChildrenChange = (index, event) => {
@@ -33,7 +39,7 @@ const CreateCitizen = () => {
     }
     function createCitizen( ) {
          
-        fetch('http://localhost:8080/updateCitizen', {
+        fetch('http://localhost:8080/citizen/update', {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",
@@ -62,7 +68,7 @@ const CreateCitizen = () => {
                         <h4 className="card-title">Citizen</h4>
                     </div>
                     <div className="card-body">
-                        <Input id="id"
+                    <Input id="id"
                             handleChange={handleInputChange}
                             value={citizen.id}
                             label="ID"></Input>
@@ -70,7 +76,7 @@ const CreateCitizen = () => {
                             handleChange={handleInputChange}
                             value={citizen.name}
                             label="FULL NAME"></Input>
-                        <CheckBox id="drivingLiscense"
+                        <CheckBox id="hasDrivingLicense"
                             handleChange={handleInputChange}
                             value={citizen.hasDrivingLicense}
                             label="Has Driving Liscense"></CheckBox>
@@ -105,4 +111,4 @@ const CreateCitizen = () => {
   );
 };
   
-export default CreateCitizen;
+export default UpdateCitizen;

@@ -38,9 +38,11 @@ const NumberOfChildren = () => {
                         <thead>
                         <tr>
                             <th>ID</th>
+                            <th>id</th>
                             <th>Full Name</th>
                             <th>Is Citizen</th>
                             <th>Driving Liscense</th>
+                            <th>Children</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -52,7 +54,7 @@ const NumberOfChildren = () => {
                                     <td>{ctz.name}</td>
                                     <td>{ctz.isCitizen  ? 'YES' : 'NO'}</td>
                                     <td>{ctz.hasDrivingLicense ? 'YES' : 'NO'}</td>
-    
+                                    <td>{JSON.stringify(ctz.children)}</td>
                                 </tr>
                             )
                         }

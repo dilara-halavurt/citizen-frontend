@@ -41,11 +41,12 @@ const DrivingLiscense = () => {
                     <table className="table table-bordered table-hover table-striped table-responsive">
                         <thead>
                         <tr>
-                            <th></th>
-                            <th>ID</th>
+                        <th>ID</th>
+                            <th>id</th>
                             <th>Full Name</th>
                             <th>Is Citizen</th>
                             <th>Driving Liscense</th>
+                            <th>Children</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -57,6 +58,7 @@ const DrivingLiscense = () => {
                                     <td>{ctz.name}</td>
                                     <td>{ctz.isCitizen  ? 'YES' : 'NO'}</td>
                                     <td>{ctz.hasDrivingLiscense ? 'YES' : 'NO'}</td>
+                                    <td>{JSON.stringify(ctz.children)}</td>
     
                                 </tr>
                             )

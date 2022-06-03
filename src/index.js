@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CreateCitizen from './pages/CreateCitizen';
+import UpdateCitizen from './pages/UpdateCitizen';
 import DrivingLiscense from './pages/DrivingLiscense';
 import GetAll from './pages/GetAll';
 import GetById from './pages/GetById';
@@ -24,6 +25,7 @@ root.render(
         <Route path='/getById' element={<GetById/>} />
         <Route path='/isCitizen' element={<IsCitizen/>} />
         <Route path='/getByChildren' element={<NumberofChildren/>} />
+        <Route path='/updateCitizen' element={<UpdateCitizen/>} />
     </Routes>
   </Router>
 );

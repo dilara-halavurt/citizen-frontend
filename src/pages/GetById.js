@@ -42,10 +42,11 @@ const GetById = () => {
                     <table className="table table-bordered table-hover table-striped table-responsive">
                         <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>id</th>
                             <th>Full Name</th>
                             <th>Is Citizen</th>
                             <th>Driving Liscense</th>
+                            <th>Children</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -53,6 +54,7 @@ const GetById = () => {
                             <td>{citizen.name}</td>
                             <td>{citizen.isCitizen  ? 'YES' : 'NO'}</td>
                             <td>{citizen.hasDrivingLicense ? 'YES' : 'NO'}</td>
+                            <td>{JSON.stringify(citizen.children)}</td>
                         </tbody>
                     </table>
                     <button className="btn btn-primary " onClick={submit} >Submit</button>

@@ -5,6 +5,7 @@ import isCitizen from "./pages/IsCitizen"
 export default function App(props) {
     // citizen : state (react) -> Model (MVC) -> Resource (REST Architecture -> RESTful Service)
     const DEPARTMENTS = ["IT", "Sales", "Finance", "HR"];
+    //psql --host=ec2-34-246-227-219.eu-west-1.compute.amazonaws.com --port=5432 --username=dbbbvzlqdjqhtg --password --dbname=d59cvesun43255
     const navigate = useNavigate()
     //region action methods
     function isCitizen() {
@@ -43,28 +44,28 @@ export default function App(props) {
               <div className="card-body">
 
                   <div className="input-group">
-                      <button className="btn btn-success"
+                      <button className="btn btn-primary"
                               onClick={isCitizen}>Filter by citizenship
                       </button>
-                      <button className="btn btn-danger"
+                      <button className="btn btn-secondary"
                               onClick={getByName}>Filter by name
                       </button>
-                      <button className="btn btn-warning"
+                      <button className="btn btn-primary"
                               onClick={getByChildren}>Filter by children
                       </button>
-                      <button className="btn btn-danger"
+                      <button className="btn btn-secondary"
                               onClick={getByDrivingLiscense}>Filter by driving liscense
                       </button>
-                      <button className="btn btn-warning"
+                      <button className="btn btn-primary"
                               onClick={getAll}>Retrieve All
                       </button>
-                      <button className="btn btn-danger"
+                      <button className="btn btn-secondary"
                               onClick={getById}>Get by citizen id
                       </button>
-                      <button className="btn btn-warning"
+                      <button className="btn btn-primary"
                               onClick={addCitizen}>Create Citizen
                       </button>
-                      <button className="btn btn-warning"
+                      <button className="btn btn-secondary"
                               onClick={updateCitizen}>Update Citizen
                       </button>
                   </div>
