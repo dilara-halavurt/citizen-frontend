@@ -10,7 +10,7 @@ const GetAll = () => {
     const [citizen, setCitizen] = useState(new Citizen());
     retrieveCitizens()
     function retrieveCitizens() {
-        fetch('http://localhost:8080/citizen', {
+        fetch(' https://citizen-d14-back.herokuapp.com/citizen', {
             method: 'GET',
             headers: {
                 "Accept": "application/json"

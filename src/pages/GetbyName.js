@@ -10,7 +10,7 @@ const NumberOfChildren = () => {
     const [citizens, setCitizens] = useState([]);
     const [name, setName] = useState("");
     function getByName() {
-        fetch(`http://localhost:8080/citizen/byName/${name}`, {
+        fetch(` https://citizen-d14-back.herokuapp.com/citizen/byName/${name}`, {
             method: 'GET',
             headers: {
                 "Accept": "application/json"

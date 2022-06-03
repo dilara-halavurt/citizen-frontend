@@ -7,7 +7,7 @@ import CheckBox from "../bootstrap/CheckBox";
 
 const UpdateCitizen = () => {
     const [childrenFields, setChildrenFields] = useState([
-        { childName: '', childId: '' }
+        { childName: '', childId: 0 }
       ])
     const [citizen, setCitizen] = useState(new Citizen());
     function handleInputChange(event) {
@@ -39,7 +39,7 @@ const UpdateCitizen = () => {
     }
     function createCitizen( ) {
          
-        fetch('http://localhost:8080/citizen/update', {
+        fetch(' https://citizen-d14-back.herokuapp.com/citizen/update', {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",

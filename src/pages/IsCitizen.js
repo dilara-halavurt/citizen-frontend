@@ -12,7 +12,7 @@ const IsCitizen = () => {
     const [citizen, setCitizen] = useState(new Citizen());
 
     function getAllCitizen() {
-        fetch('http://localhost:8080/citizen/isCitizen', {
+        fetch(' https://citizen-d14-back.herokuapp.com/citizen/isCitizen', {
             method: 'GET',
             headers: {
                 "Accept": "application/json"

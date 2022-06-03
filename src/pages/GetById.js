@@ -10,7 +10,7 @@ const GetById = () => {
     
     function getCitizensById() {
          
-        fetch(`http://localhost:8080/citizen/byId/${citizen.id}`, {
+        fetch(` https://citizen-d14-back.herokuapp.com/citizen/byId/${citizen.id}`, {
             method: 'GET',
             headers: {
                 "Accept": "application/json"

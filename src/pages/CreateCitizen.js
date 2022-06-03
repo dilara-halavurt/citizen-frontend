@@ -39,7 +39,7 @@ const CreateCitizen = () => {
     }
     function createCitizen( ) {
          
-        fetch('http://localhost:8080/citizen', {
+        fetch(' https://citizen-d14-back.herokuapp.com/citizen', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",

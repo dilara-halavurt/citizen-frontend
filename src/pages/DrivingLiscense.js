@@ -12,7 +12,7 @@ const DrivingLiscense = () => {
     const [citizen, setCitizen] = useState(new Citizen());
 
     function getAllCitizen() {
-        fetch('http://localhost:8080/citizen/hasDriversLiscense', {
+        fetch(' https://citizen-d14-back.herokuapp.com/citizen/hasDriversLiscense', {
             method: 'GET',
             headers: {
                 "Accept": "application/json"
@@ -57,7 +57,7 @@ const DrivingLiscense = () => {
                                     <td>{ctz.id}</td>
                                     <td>{ctz.name}</td>
                                     <td>{ctz.isCitizen  ? 'YES' : 'NO'}</td>
-                                    <td>{ctz.hasDrivingLiscense ? 'YES' : 'NO'}</td>
+                                    <td>{ctz.hasDrivingLicense ? 'YES' : 'NO'}</td>
                                     <td>{JSON.stringify(ctz.children)}</td>
     
                                 </tr>
